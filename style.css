@@ -178,22 +178,68 @@ img{
     justify-content: center;
 }
 
-#tab-2-content .tab-2-content-top{
-    display: grid;
-    grid-template-columns:2fr 1fr ;
-    grid-gap: 1rem;
-    justify-content: center;
-    align-items: center;
+#tab-2-content .tab-2-content-top {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 1rem;
+	justify-content: center;
+	align-items: center;
 }
-#tab-2-content .tab-2-content-bottom{
+
+#tab-2-content .tab-2-content-bottom {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2rem;
+	text-align: center;
+}
+.table{
+    width: 100%;
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns:repeat(3 1fr) ;
-    grid-gap: .2rem;
-    justify-content: center;
-    align-items: center;
-    
-    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+
+}
+.table {
+	width: 100%;
+	margin-top: 2rem;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.table thead th {
+	text-transform: uppercase;
+	padding: 0.8rem;
+}
+
+.table tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+.table tbody tr td {
+	color: #999;
+	padding: 0.8rem 1.2rem;
+	text-align: center;
+}
+
+.table tbody tr td:first-child {
+	text-align: left;
+}
+
+.table tbody tr:nth-child(odd) {
+	background: #222;
+}
+/* hide content initially  */
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+    display: none;
+}
+.show{
+    display: block !important;
 }
 /* container*/
 .container{
@@ -202,6 +248,42 @@ img{
     overflow: hidden;
     padding: 0.5rem ;
 
+}
+/* footer */
+.footer {
+	max-width: 70%;
+	margin: 1rem auto;
+	overflow: auto;
+}
+
+.footer,
+.footer a {
+	color: #999;
+	font-size: 0.9rem;
+}
+
+.footer p {
+	margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+.footer li {
+	line-height: 1.9;
+}
+
+.footer .lang-select {
+	margin-top: 2rem;
+	color: #999;
+	background-color: #000;
+	background-image: none;
+	border: 1px solid #333;
+	padding: 1rem 1.2rem;
+	border-radius: 5px;
 }
 /*.text*/
 
@@ -270,6 +352,43 @@ img{
     
 
 }
+.btn-icon{
+    margin-left: 1rem;
+}
+@media (max-width: 700px) {
+	
+
+	
+	#tab-1-content .tab-1-content-inner {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+
+	#tab-2-content .tab-2-content-top {
+		display: block;
+		text-align: center;
+	}
+
+	#tab-2-content .tab-2-content-bottom {
+		
+		grid-template-columns: 1fr;
+		
+	}
+
+	.btn-xl {
+		font-size: 1rem;
+		padding: 1.2rem 1.6rem;
+		text-transform: uppercase;
+	}
+}
+
+@media(max-height: 600px) {
+  .showcase-content {
+	margin-top: 3rem;
+}
+}
+
+
 
 
 
